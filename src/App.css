@@ -1,38 +1,125 @@
-.App {
+body {
+  margin: 0;
+  color: #121828;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  background-color:rgb(228, 233, 247);
+}
+.bg-white{
+  background: #fff;
+}
+.mainHeader{
+  min-height: 64px;
+  margin-bottom: 25px;
+  padding:10px;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 240px;
+  background: rgb(17 16 29);
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar.active,
+.sidebar.active> .sidebar {
+  width: 70px;
+}
+.logo_name{
+width: 50px;
+}
+.sidebar #btn {
+  position: absolute;
+  color: #fff;
+  top: 6px;
+  right: 0;
+  font-size: 22px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+.sidebar ul {
+  margin-top: 20px;
+  padding: 0;
+}
+.sidebar ul li {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin: 5px 0;
+  list-style: none;
+  line-height: 50px;
+}
+.sidebar ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 12px;
+  white-space: nowrap;
+  transition: all 0.4s ease;
+}
+.sidebar ul li i {
+  font-size: 18px;
+  font-weight: 400;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
+.sidebar .links_name {
+  font-size: 15px;
+  font-weight: 400;
   pointer-events: none;
+  transition: all 0.3s ease;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.sidebar.active .links_name {
+  transition: 0s;
+  opacity: 0;
+  pointer-events: auto;
+}
+.home_content {
+  z-index: 100;
+  width: calc(100% - 240px);
+  margin-left: 240px;
+}
+.outer-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .login-page{
+    box-shadow: 0 0 13px #97a7c37a, 0 2px 13px 0 #97a7c3ab;
+    padding: 25px 20px;
+    width: 400px;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .logo-w{
+    width: 70px;
+    margin: 0 auto 15px;
   }
+  .eye-opt{
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    cursor: pointer;
+  }
+  input.cusImgUploded {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    cursor: pointer;
 }
